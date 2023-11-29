@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Movie Seat Booking</title>
+  </head>
+  <body>
+    <div class="bus-container">
+      <label> Select a Class:</label>
+      <select id="seatType">
+        <optgroup label="Lower Deck">
+          <option value="LL">Lower Left (Rs. 500)</option>
+          <option value="LR">Lower Right (Rs. 1500)</option>
+        </optgroup>
+        <optgroup label="Upper Deck">
+          <option value="UL">Upper Left (Rs. 1000)</option>
+          <option value="UR">Upper Right (Rs. 2500)</option>
+        </optgroup>
+      </select>
+    </div>
+
+    <ul class="showcase">
+      <li>
+        <div class="seat available"></div>
+        <small>Available</small>
+      </li>
+      <li>
+        <div class="seat selected"></div>
+        <small>Selected</small>
+      </li>
+      <li>
+        <div class="seat women"></div>
+        <small>Women</small>
+      </li>
+      <li>
+        <div class="seat sold"></div>
+        <small>Sold</small>
+      </li>
+    </ul>
+    <div class="container">
+      <div class="screen">
+        <img src="./image/bus.gif" alt="" width="200px" height="100px" />
+      </div>
+      <div class="lower-deck">
+        <div class="total-deck_1">
+          <div class="row_1">
+            <!-- Lower Left Single Seats (L1 to L5) -->
+            <div class="seat women"></div>
+            <div class="seat available"></div>
+            <div class="seat available"></div>
+            <div class="seat women "></div>
+            <div class="seat"></div>
+          </div>
+  
+          <div class="row_2">
+            <!-- Lower Right Couple Seats (R1 to R10) -->
+            <div>
+              <div class="seat double women available"></div>
+              <div class="seat double available"></div>
+              <div class="seat double sold"></div>
+              <div class="seat double available"></div>
+              <div class="seat double available"></div>
+            </div>
+            <div>
+              <div class="seat double available"></div>
+              <div class="seat double sold"></div>
+              <div class="seat double women available"></div>
+              <div class="seat double available"></div>
+              <div class="seat double available"></div>
+            </div>
+          </div>
+        </div>
+        <!-- Upper dick -->
+        <div class="total-deck_2">
+          <div class="row_1">
+            <!-- Upper Left Single Seats (L1 to L5) -->
+            <div class="seat women"></div>
+            <div class="seat available"></div>
+            <div class="seat sold"></div>
+            <div class="seat available"></div>
+            <div class="seat women available"></div>
+          </div>
+  
+          <div class="row_2">
+            <!-- Upper Right Couple Seats (R1 to R10) -->
+            <div>
+              <div class="seat double available"></div>
+              <div class="seat double available"></div>
+              <div class="seat double women available"></div>
+              <div class="seat double available"></div>
+              <div class="seat double available"></div>
+            </div>
+            <div>
+              <div class="seat double sold"></div>
+              <div class="seat double available"></div>
+              <div class="seat double women available"></div>
+              <div class="seat double sold"></div>
+              <div class="seat double available"></div>
+            </div>
+        </div>
+      </div>
+    </div>
+
+    <p class="text">
+      You have selected <span id="count">0</span> seat for a price of RS.<span
+        id="total"
+        >0</span
+      >
+    </p>
+    <button class="reset">Reset</button>
+    <script src="script.js"></script>
+  </body>
+</html>
